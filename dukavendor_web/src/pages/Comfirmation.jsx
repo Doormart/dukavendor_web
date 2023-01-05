@@ -51,7 +51,7 @@ function Comfirmation() {
 
                 <div className='flex-d'>
                     <div className='box-btn'>
-                        <p style={{paddingTop:'10px'}}>2</p>
+                        <p style={{paddingTop:'10px'}}>3</p>
                     </div>
                     <span className='text'>Confirm contact information</span>
                 </div>
