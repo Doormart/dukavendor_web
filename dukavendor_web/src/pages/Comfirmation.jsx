@@ -57,13 +57,13 @@ function Comfirmation() {
                 </div>
             </div>
             <div className='main-section-register'>
-                <img src={Header_svg} style={{ minWidth: '100%' }} />
-                <div className='form-div'>
+                <img src={Header_svg} style={{ width: '100%' }} />
+                <div className='form-div' style={{textAlign:"center"}}>
                     <h3>Confirm contact information</h3>
                     <p className='text-p'>Verify your contact information</p>
                     <h4>An OTP code has been sent to your email and phone number, enter the code to verify your contact information </h4>
                     <div class="container" style={{paddingTop:'60px'}}>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} style={{textAlign:"center"}}>
                             {otp.map((value, index) => (
                                 <div key={index} className="otp-box">
                                     <input
@@ -76,9 +76,13 @@ function Comfirmation() {
                                     />
                                 </div>
                             ))}<br/>
-                            <button type="submit" className='undesable-btn' disabled={otp.includes('')}>
-                            Verify contact information
-                            </button>
+                            <div>
+                            <div style={{textAlign:'center'}}>
+                                <button type="submit" className='undesable-btn'style={{paddingLeft:'20px',paddingRight:'20px', width:'600px'}} disabled={otp.includes('')}>
+                                Verify contact information
+                                </button>
+                            </div>
+                            </div>
                         </form>
                     </div>
                 </div>
