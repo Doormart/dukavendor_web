@@ -50,7 +50,7 @@ function Register() {
       <div className='side-nav-register'>
         <img src={Logo} />
         <section className='button-section'>
-          <button className='reg-btn' onClick={()=> navigate('/')}>Sign up</button>
+          <button className='reg-btn' onClick={()=> navigate('/sign-up')}>Sign up</button>
           <button  className='logo-btn' onClick={()=> navigate('/sign-in')}>Login</button>
         </section>
         <div className='flex-d'>
