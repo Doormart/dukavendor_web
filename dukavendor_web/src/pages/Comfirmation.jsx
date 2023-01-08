@@ -38,12 +38,12 @@ function Comfirmation() {
             <div className='side-nav-register'>
                 <img src={Logo} />
                 <section className='button-section'>
-                    <button className='reg-btn'onClick={()=> navigate('/')}>Sign up</button>
-                    <button className='logo-btn'onClick={()=> navigate('/sign-in')}>Login</button>
+                    <button className='reg-btn' onClick={() => navigate('/sign-up')}>Sign up</button>
+                    <button className='logo-btn' onClick={() => navigate('/sign-in')}>Login</button>
                 </section>
                 <div className='flex-d'>
                     <div className='box-btn'>
-                        <p className='inner-btn'>{pathMatchRoute('/otp') ?1 : <img width='20px' src={Good}/>}</p>
+                        <p className='inner-btn'>{pathMatchRoute('/otp') ? 1 : <img width='20px' src={Good} />}</p>
                     </div>
                     <p className='text'>Business information</p>
                 </div>
@@ -51,19 +51,19 @@ function Comfirmation() {
 
                 <div className='flex-d'>
                     <div className='box-btn'>
-                        <p style={{paddingTop:'10px'}}>3</p>
+                        <p style={{ paddingTop: '10px' }}>3</p>
                     </div>
                     <span className='text'>Confirm contact information</span>
                 </div>
             </div>
             <div className='main-section-register'>
-                <img src={Header_svg} style={{ minWidth: '100%' }} />
-                <div className='form-div'>
+                <img src={Header_svg} style={{ width: '100%' }} />
+                <div className='form-div' style={{ textAlign: "center" }}>
                     <h3>Confirm contact information</h3>
                     <p className='text-p'>Verify your contact information</p>
                     <h4>An OTP code has been sent to your email and phone number, enter the code to verify your contact information </h4>
-                    <div class="container" style={{paddingTop:'60px'}}>
-                        <form onSubmit={handleSubmit}>
+                    <div class="container" style={{ paddingTop: '60px' }}>
+                        <form onSubmit={handleSubmit} style={{ textAlign: "center" }}>
                             {otp.map((value, index) => (
                                 <div key={index} className="otp-box">
                                     <input
@@ -75,10 +75,14 @@ function Comfirmation() {
                                         value={value}
                                     />
                                 </div>
-                            ))}<br/>
-                            <button type="submit" className='undesable-btn' disabled={otp.includes('')}>
-                            Verify contact information
-                            </button>
+                            ))}<br />
+                            <div>
+                                <div style={{ textAlign: 'center' }}>
+                                    <button type="submit" className='undesable-btn' style={{ paddingLeft: '20px', paddingRight: '20px', width: '600px' }} disabled={otp.includes('')}>
+                                        Verify contact information
+                                    </button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

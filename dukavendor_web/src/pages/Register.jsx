@@ -25,13 +25,32 @@ function Register() {
     updatedFiles.splice(index, 1);
     setFiles(updatedFiles);
   };
+  const [buisiness, setBuisines] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password2, setPassword2] = useState('');
+  const [address, setAddress] = useState('');
+  const [select, setSelect] = useState('');
+  const [number, setNumber] = useState('');
+  const [formError, setFormError] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (buisiness === '' || password === '' || files.length === 0 || select === '' || number === ''|| email ===''|| password2==='' || address==='') {
+      setFormError('All fields are required');
+    } else {
+      setFormError('');
+      // valid correct
+    }
+  };
+
 
   return (
     <div className='dashbord-container'>
       <div className='side-nav-register'>
         <img src={Logo} />
         <section className='button-section'>
-          <button className='reg-btn' onClick={()=> navigate('/')}>Sign up</button>
+          <button className='reg-btn' onClick={()=> navigate('/sign-up')}>Sign up</button>
           <button  className='logo-btn' onClick={()=> navigate('/sign-in')}>Login</button>
         </section>
         <div className='flex-d'>
@@ -58,11 +77,11 @@ function Register() {
             <div class="row">
               <div className='int'>
                 <label>Business</label>
-                <input class="input" type="text" placeholder="enter business name" />
+                <input class="input" type="text" placeholder="enter business name"  value={buisiness} onChange={(event) => setBuisines(event.target.value)} required/>
               </div>
               <div className='int'>
                 <label>Vendor category</label>
-                <select class="input">
+                <select class="input" value={select} onChange={(event) => setSelect(event.target.value)} required>
                   <option value="" disabled selected>Select category</option>
                   <option value="volvo">Volvo</option>
                   <option value="saab">Saab</option>
@@ -74,27 +93,27 @@ function Register() {
             <div class="row">
               <div className='int'>
                 <label>Email address</label>
-                <input class="input" type="email" placeholder="example@gmail.com" />
+                <input class="input" type="email" placeholder="example@gmail.com" value={email} onChange={(event) => setEmail(event.target.value)} required/>
               </div>
               <div className='int'>
                 <label>Phone number</label>
-                <input class="input" type="number" placeholder="+2349054123250" />
+                <input class="input" type="number" placeholder="+2349054123250" value={number} onChange={(event) => setNumber(event.target.value)} required />
               </div>
             </div>
             <div className="row">
               <div className='int'>
                 <label>Address</label>
-                <input class="input" type="password" placeholder="enter your address" />
+                <input class="input" type="password" placeholder="enter your address" value={address} onChange={(event) => setAddress(event.target.value)} required />
               </div>
             </div>
             <div class="row">
               <div className='int'>
                 <label>Password</label>
-                <input class="input" type="password" placeholder="enter password" />
+                <input class="input" type="password" placeholder="enter password"value={password} onChange={(event) => setPassword(event.target.value)} required />
               </div>
               <div className='int'>
                 <label>Confirm password</label>
-                <input class="input" type="text" placeholder="confirm password" />
+                <input class="input" type="text" placeholder="confirm password"value={password2} onChange={(event) => setPassword2(event.target.value)} required />
               </div>
             </div>
             {
@@ -132,7 +151,7 @@ function Register() {
                   <p class="title">
                     Drag & drop files or <span className='span-text'>click here</span>
                   </p>
-                  <input id="file-input" className='input-hidden' type="file" multiple onChange={handleChange} />
+                  <input id="file-input" className='input-hidden' type="file"   multiple onChange={handleChange} />
                 </label>
                 }
                 {files.length > 0 ?
@@ -144,14 +163,12 @@ function Register() {
                 <span id="imageName"></span>
               </label>
               : ''}
-                 <button className='undesable-btn' >Next</button>
-            
-              
-              
-          </div>
-         
-        </div>
-        
+                 {formError && <div className="error">{formError}</div>}
+                 <div style={{textAlign:'center'}}>
+                   <button className='undesable-btn' onClick={handleSubmit} >Next</button>
+                 </div> 
+          </div> 
+        </div> 
       </div>
     </div>
   )

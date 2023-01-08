@@ -2,8 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import Logo from '../img/logo.svg'
 import Header_svg from '../img/header_svg.svg'
-import Remove from '../img/remove.svg'
-import Plus from '../img/plus.svg'
 import { useNavigate } from 'react-router-dom';
 function Login() {
   const navigate = useNavigate()
@@ -13,25 +11,12 @@ function Login() {
      return true
     } 
  }
-
-  const [files, setFiles] = useState([]);
-
-  const handleChange = (event) => {
-    const newFiles = [...event.target.files];
-    setFiles([...files, ...newFiles]);
-  };
-  const handleRemove = (index) => {
-    const updatedFiles = [...files];
-    updatedFiles.splice(index, 1);
-    setFiles(updatedFiles);
-  };
-
   return (
     <div className='dashbord-container'>
       <div className='side-nav-register'>
         <img src={Logo} />
         <section className='button-section'>
-          <button className='reg-btn'onClick={()=> navigate('/')}>Sign up</button>
+          <button className='reg-btn'onClick={()=> navigate('/sign-up')}>Sign up</button>
           <button  className='logo-btn' onClick={()=> navigate('/sign-in')}>Login</button>
         </section>
         <div className='flex-d'>
@@ -46,16 +31,15 @@ function Login() {
           <div className='box-btn'>
             <p >2</p>
           </div>
-          <span className='text'>Confirm contact information</span>
+          <p className='text'>Confirm contact information</p>
         </div>
       </div>
       <div className='main-section-register'>
-        <img src={Header_svg} style={{ minWidth: '100%' }} />
+        <img src={Header_svg} style={{ width: '100%' }} />
         <div className='form-div'>
           <h3>Personal information</h3>
           <p>Enter your Loin information</p>
-          <div class="container">
-            
+          <div class="container">  
             <div class="row">
               <div className='int'>
                 <label>Email address</label>
@@ -66,10 +50,11 @@ function Login() {
                 <input class="input" type="password" placeholder="enter password" />
               </div>
             </div>
+            <div style={{textAlign:'center'}}>
+                   <button className='undesable-btn' >Next</button>
+                 </div>
           </div>
-          <button className='undesable-btn' >Login</button>
-        </div>
-        
+        </div> 
       </div>
     </div>
   )
