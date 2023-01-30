@@ -4,6 +4,7 @@ import Logo from '../img/logo.svg'
 import Header_svg from '../img/header_svg.svg'
 import Remove from '../img/remove.svg'
 import Plus from '../img/plus.svg'
+import Eye from '../img/eye.svg'
 import { useNavigate } from 'react-router-dom';
 function Register() {
   const navigate = useNavigate()
@@ -33,6 +34,10 @@ function Register() {
   const [select, setSelect] = useState('');
   const [number, setNumber] = useState('');
   const [formError, setFormError] = useState('');
+  const [inputType, setInputType] = useState('password');
+  function handleClick() {
+    setInputType(inputType === 'password' ? 'text' : 'password');
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -81,13 +86,15 @@ function Register() {
               </div>
               <div className='int'>
                 <label>Vendor category</label>
-                <select class="input" value={select} onChange={(event) => setSelect(event.target.value)} required>
-                  <option value="" disabled selected>Select category</option>
+                <div class="input">
+                <select style={{width:'95%','::placeholder': { color: 'blue' }}}   placeholder="placeholder"  value={select} onChange={(event) => setSelect(event.target.value)} required>
+                  <option value="" disabled>Select category</option>
                   <option value="volvo">Volvo</option>
                   <option value="saab">Saab</option>
                   <option value="fiat">Fiat</option>
                   <option value="audi">Audi</option>
                 </select>
+                </div>
               </div>
             </div>
             <div class="row">
@@ -103,17 +110,23 @@ function Register() {
             <div className="row">
               <div className='int'>
                 <label>Address</label>
-                <input class="input" type="password" placeholder="enter your address" value={address} onChange={(event) => setAddress(event.target.value)} required />
+                <input class="input" type="text" placeholder="enter your address" value={address} onChange={(event) => setAddress(event.target.value)} required />
               </div>
             </div>
             <div class="row">
               <div className='int'>
                 <label>Password</label>
-                <input class="input" type="password" placeholder="enter password"value={password} onChange={(event) => setPassword(event.target.value)} required />
+                <div style={{display:'flex', justifyContent:'space-between'}} class="input"> 
+                  <input className='passwordinput'  type={inputType} placeholder="enter password" value={password} onChange={(event) => setPassword(event.target.value)} required />
+                  <img  onClick={handleClick} src={Eye} />
+                </div>
               </div>
               <div className='int'>
                 <label>Confirm password</label>
-                <input class="input" type="text" placeholder="confirm password"value={password2} onChange={(event) => setPassword2(event.target.value)} required />
+                <div style={{display:'flex', justifyContent:'space-between'}} class="input"> 
+                  <input className='passwordinput'  type={inputType}  placeholder="confirm password" value={password2} onChange={(event) => setPassword2(event.target.value)}required />
+                  <img  onClick={handleClick} src={Eye} />
+                </div>
               </div>
             </div>
             {
@@ -125,11 +138,11 @@ function Register() {
                     <th style={{ width: '40px' }}></th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody >
                   {typeof files === 'object' && files.length > 0 ? (
                     files.map((file, index) => (
                       <tr key={file.name}>
-                        <td style={{ width: '40px', height: '20px' }}>{file.name}</td>
+                        <td style={{ width: '40px', height: '40px', paddingLeft:'20px' }}>{file.name}</td>
                         <td>{(file.size / 1024 / 1024).toFixed(2)} MB</td>
                         <td>
                           <img src={Remove}

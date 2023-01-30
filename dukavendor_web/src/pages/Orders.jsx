@@ -4,7 +4,7 @@ import Dashboard from './Dashboard'
 function Orders() {
   return (
     <Dashboard>
-      <div>
+      <div style={{height:'100vh'}}>
       <h1>orders</h1>
     </div>
     </Dashboard>

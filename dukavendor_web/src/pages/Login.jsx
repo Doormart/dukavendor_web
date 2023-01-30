@@ -29,7 +29,7 @@ function Login() {
 
         <div className='flex-d'>
           <div className='box-btn'>
-            <p >2</p>
+            <p className='inner-btn'>2</p>
           </div>
           <p className='text'>Confirm contact information</p>
         </div>

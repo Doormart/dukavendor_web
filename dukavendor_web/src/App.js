@@ -1,6 +1,6 @@
 import { BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Comfirmation from './pages/Comfirmation';
-import Dashboard from './pages/Dashboard';
+import Dashboardspage from './pages/Dashboardspage';
 import Login from './pages/Login';
 import Orders from './pages/Orders';
 import Products from './pages/Products';
@@ -13,7 +13,7 @@ function App() {
       <Router>
         {/* <div> */}
           <Routes>
-            <Route path='/' element={<Dashboard/>} />
+            <Route path='/' element={<Dashboardspage/>} />
             <Route path='/orders' element={<Orders/>} />
             <Route path='/products' element={<Products/>} />
             <Route path='/wallet' element={<Wallet/>} />
