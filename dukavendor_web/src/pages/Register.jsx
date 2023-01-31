@@ -110,7 +110,8 @@ function Register() {
             <div className="row">
               <div className='int'>
                 <label>Address</label>
-                <input class="input" type="text" placeholder="enter your address" value={address} onChange={(event) => setAddress(event.target.value)} required />
+                
+                <textarea className='textarea'type="text" placeholder="enter your address" value={address} onChange={(event) => setAddress(event.target.value)} required />
               </div>
             </div>
             <div class="row">

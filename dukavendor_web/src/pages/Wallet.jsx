@@ -37,7 +37,7 @@ export default function Wallet() {
   }
   return (
     <Dashboard>
-      <div>
+      <div style={{padding:'50px 10px'}}>
         {/* <EmptyPage
          image={EmptyWallet} 
          mainText="This is where your money is"
