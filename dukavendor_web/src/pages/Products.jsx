@@ -107,7 +107,7 @@ and small beef" value={email} onChange={(event) => setEmail(event.target.value)}
             </div>
           </div>
         </div>
-        <div style={{ backgroundColor: 'white', borderRadius: '15px', padding: '20px 20px', marginTop: '30px', zIndex: '1' }}>
+        <div style={{ backgroundColor: 'white', borderRadius: '15px', padding: '20px 20px', marginTop: '10px', zIndex: '1' }}>
           <table style={{ width: '100%' }}>
             <thead style={{ borderBottom: 'none' }}>
               <tr>

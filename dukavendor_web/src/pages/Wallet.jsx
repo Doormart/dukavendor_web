@@ -64,7 +64,7 @@ export default function Wallet() {
               {currentData.map((row) => (
                 <tr key={row.id} style={{ borderBottom: '1px solid #C7C7C7',height:'30px' }}>
                   <td style={{marginBottom:"90px"}}>
-                    <p style={{marginTop:"30px"}}className='boldsmalltext'>Debited</p>
+                    <p style={{marginTop:"20px"}}className='boldsmalltext'>Debited</p>
                     <p className='greysmallesttext'>Friday, 18th April, 2022</p>
                     <p  style={{marginBottom:"15px"}} className='greysmallesttext'>07:20 PM</p>
                   </td>

@@ -117,16 +117,16 @@ function Register() {
             <div class="row">
               <div className='int'>
                 <label>Password</label>
-                <div style={{display:'flex', justifyContent:'space-between'}} class="input"> 
-                  <input className='passwordinput'  type={inputType} placeholder="enter password" value={password} onChange={(event) => setPassword(event.target.value)} required />
-                  <img  onClick={handleClick} src={Eye} />
+                <div style={{display:'flex', justifyContent:'space-between'}} class="passwordinput"> 
+                  <input className='inputpass'  type={inputType} placeholder="enter password" value={password} onChange={(event) => setPassword(event.target.value)} required />
+                  <img  onClick={handleClick} style={{width:"20px", paddingRight:"8px"}} src={Eye} />
                 </div>
               </div>
               <div className='int'>
                 <label>Confirm password</label>
-                <div style={{display:'flex', justifyContent:'space-between'}} class="input"> 
-                  <input className='passwordinput'  type={inputType}  placeholder="confirm password" value={password2} onChange={(event) => setPassword2(event.target.value)}required />
-                  <img  onClick={handleClick} src={Eye} />
+                <div style={{display:'flex', justifyContent:'space-between'}} class="passwordinput"> 
+                  <input className='inputpass'  type={inputType}  placeholder="confirm password" value={password2} onChange={(event) => setPassword2(event.target.value)}required />
+                  <img  onClick={handleClick} style={{width:"20px", paddingRight:"8px"}}src={Eye} />
                 </div>
               </div>
             </div>
