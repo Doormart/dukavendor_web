@@ -7,7 +7,7 @@ import Order from '../img/order.svg'
 import Stars from '../img/stars.svg'
 import Revenue from '../img/revenue.svg'
 import RightArrow from '../img/rightArrow.svg'
-import Charts from '../components/charts'
+import SplineAreaChart from '../components/SplineAreaChart'
 import { useState } from 'react';
 
 export default function Dashboardspage() {
@@ -56,11 +56,11 @@ export default function Dashboardspage() {
       <div className='graph-container' >
         <div className='graph' style={{ marginRight: '20px' }}>
           <p>Revenue</p>
-          <Charts />
+          <SplineAreaChart />
         </div>
         <div className='graph'>
           <p>Orders</p>
-          <Charts />
+          <SplineAreaChart />
         </div>
       </div>
       {isShown ? (
