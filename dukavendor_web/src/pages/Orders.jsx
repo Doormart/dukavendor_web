@@ -30,7 +30,7 @@ function Orders() {
             </div>
           </div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-around', overflowX: 'auto' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between', overflowX: 'scroll',marginTop:'8px' }}>
           {cards.map(card => (
             <div className='small-card' key={card} style={{ backgroundColor: active[card] ? "#476A6F" : "#FFFFFF" }} onClick={() => setActive({ ...active, [card]: !active[card] })}>
               <p className='greysmalltext' style={{ paddingRight: '20px', color: active[card] ? "white" : "black" }}>Pending</p>

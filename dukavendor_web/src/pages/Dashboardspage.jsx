@@ -24,8 +24,12 @@ export default function Dashboardspage() {
   return (
     <Dashboard>
       <div className='select-div'>
-        <p className='s-p' >This month</p>
-        <img style={{ height: '10px' }} src={Dropdown} />
+        <select style={{ backgroundColor: 'white', width: '100px' }}>
+          <option value="name">This week</option>
+          <option value="saab">month</option>
+          <option value="fiat">year</option>
+          <option value="audi">Audi</option>
+        </select>
       </div>
       <div className='dashboard-card'>
         <div className='card'>
@@ -49,9 +53,13 @@ export default function Dashboardspage() {
           <span className='s-p-light' style={{ margin: '5px' }} >Total Revenue</span>
         </div>
       </div>
-      <div style={{ marginTop: '20px' }} className='select-div'>
-        <p className='s-p' >This week</p>
-        <img style={{ height: '10px' }} src={Dropdown} />
+      <div className='select-div' style={{ marginTop: '20px' }}>
+        <select style={{ backgroundColor: 'white', width: '100px' }}>
+          <option value="name">This week</option>
+          <option value="saab">month</option>
+          <option value="fiat">year</option>
+          <option value="audi">Audi</option>
+        </select>
       </div>
       <div className='graph-container' >
         <div className='graph' style={{ marginRight: '20px' }}>
@@ -151,7 +159,7 @@ export default function Dashboardspage() {
             </tbody>
           </table>
         </div>
-        }
+      }
     </Dashboard>
   )
 }

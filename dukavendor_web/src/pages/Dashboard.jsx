@@ -103,8 +103,8 @@ function Dashboard({ children }) {
         <header className='header'>
           <h1>{location.pathname === '/' ? 'Dashbaord' : url[0].toUpperCase() + url.slice(1)}</h1>
           <div className='profile-section'>
-            <img src={Bell} style={{ paddingRight: "40px", width:"25px" }} />
-            <img src={Profile} style={{ paddingRight: "40px", width:"40px" }} />
+            <img src={Bell} style={{  width:"25px" }} />
+            <img src={Profile} style={{ width:"40px" }} />
             <img src={Dropdown} style={{ width:"25px" }} />
           </div>
         </header>

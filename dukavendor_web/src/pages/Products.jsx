@@ -65,7 +65,7 @@ function Products() {
                 <div class="row">
                   <div className='int'>
                     <label className='greysmallesttext'>Description</label>
-                    <textarea className='textarea'  type="email" placeholder="e.g This is jollof rice made with bazmatti rice, filled with shredded chicken, hotdog, turkey
+                    <textarea className='textarea' type="email" placeholder="e.g This is jollof rice made with bazmatti rice, filled with shredded chicken, hotdog, turkey
 and small beef" value={email} onChange={(event) => setEmail(event.target.value)} required />
                   </div>
                 </div>
@@ -92,9 +92,9 @@ and small beef" value={email} onChange={(event) => setEmail(event.target.value)}
           </div>
         )}
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-          <div className='select-div'>
+        <div className='select-div'>
             <select onChange={handleSearchChange} style={{ backgroundColor: 'white', width: '100px' }}>
-              <option value="name">All</option>
+              <option value="name">This week</option>
               <option value="saab">month</option>
               <option value="fiat">year</option>
               <option value="audi">Audi</option>
@@ -107,7 +107,7 @@ and small beef" value={email} onChange={(event) => setEmail(event.target.value)}
             </div>
           </div>
         </div>
-        <div style={{ backgroundColor: 'white', borderRadius: '15px', padding: '20px 20px', marginTop: '10px', zIndex: '1' }}>
+        <div style={{ backgroundColor: 'white', borderRadius: '15px', padding: '20px 20px', marginTop: '20px', zIndex: '1' }}>
           <table style={{ width: '100%' }}>
             <thead style={{ borderBottom: 'none' }}>
               <tr>
