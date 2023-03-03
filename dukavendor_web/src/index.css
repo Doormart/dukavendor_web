@@ -148,9 +148,9 @@ body {
   padding: 15px 45px 45px;
 }
 
-.form-div p {
+/* .form-div p {
   padding-bottom: 20px;
-}
+} */
 
 .form-div h3 {
   color: #262B2C;
@@ -174,6 +174,7 @@ body {
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
+  justify-content: space-between;
 }
 
 .input {
@@ -182,7 +183,7 @@ body {
   border: 2px solid #C7C7C7;
   border-radius: 10px;
   flex: 1;
-  margin-right: 15px;
+  /* margin-right: 15px; */
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -192,7 +193,7 @@ body {
 .int {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 49%;
 }
 
 h4 {
@@ -859,32 +860,82 @@ td {
 
 
 
-@media (min-width:320px) {
+@media (max-width:350px) {
   /* smartphones, iPhone, portrait 480x320 phones */
-}
-
-@media (min-width:481px) {
-  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-}
-
-@media (min-width:641px) {
-  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-}
-
-@media (min-width:961px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-@media (max-width:1025px) {
-
-  /* big landscape tablets, laptops, and desktops */
-  .row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  .small-button{
+    padding: 9px 30px 10px 30px !important;
   }
 }
 
-@media (min-width:1281px) {
-  /* hi-res laptops and desktops */
+@media (max-width:481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .undesable-btn{
+    padding: 10px 70px !important;
+  }
+  .int {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .mobile-sign-up-btn{
+    width: 100% !important; 
+  }
 }
+
+@media (max-width: 767px){
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+   .row{
+    flex-direction: column;
+  }
+  .undesable-btn{
+    padding: 10px 160px;
+  }
+  .int {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+ 
+}
+
+@media(max-width:1025px) {
+  .side-nav-register{
+       display: none;
+  }
+  .main-section-register{
+    margin-left: 0;
+    text-align: center;
+    align-content: center;
+  }
+  .mobile-sign-up-btn{
+    margin-bottom: 30px;
+    width: 267px !important; 
+  }
+  
+  .mobile-div-cont{
+    width: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+  }
+ 
+}
+
+@media (min-width:1025px) {
+  .mobile-sign-up-btn{
+    display: none !important;
+  }
+  .mobile-logo{
+    display: none !important;
+  }
+
+  /* .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  } */
+}
+
+/* @media (min-width:1281px) { */
+  /* hi-res laptops and desktops */
+/* } */

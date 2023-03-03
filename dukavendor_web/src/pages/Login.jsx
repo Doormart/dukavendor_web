@@ -14,7 +14,7 @@ function Login() {
   return (
     <div className='dashbord-container'>
       <div className='side-nav-register'>
-        <img src={Logo} style={{ width: "90px" }} /><br /><br /><br /><br /><br/>
+        <img src={Logo} style={{ width: "90px" }} /><br /><br /><br /><br /><br />
         <div style={{ display: 'flex', alignItems: 'center', backgroundColor: '#D9D9D9', borderRadius: '10px', padding: "10px", justifyContent: "space-between", paddingLeft: '25px' }}>
           <p onClick={() => navigate('/sign-up')} className='b-p'>Sign up</p>
           <button onClick={() => navigate('/sign-in')} className='small-button' style={{ backgroundColor: '#476A6F', height: '40px' }}>Login</button>
@@ -22,7 +22,14 @@ function Login() {
       </div>
       <div className='main-section-register'>
         <img src={Header_svg} style={{ width: '100%' }} />
+        <img className='mobile-logo' src={Logo} style={{ width: "90px" }} /><br /><br />
         <div className='form-div'>
+        <div className='mobile-div-cont'>
+          <div className='mobile-sign-up-btn' style={{ display: 'flex', alignItems: 'center', backgroundColor: '#D9D9D9', borderRadius: '10px', padding: "10px", justifyContent: "space-between", paddingLeft: '25px' }}>
+            <p onClick={() => navigate('/sign-up')} className='b-p'>Sign up</p>
+            <button onClick={() => navigate('/sign-in')} className='small-button' style={{ backgroundColor: '#476A6F', height: '40px' }}>Login</button>
+          </div>
+        </div>
           <h3>Login</h3>
           <p>Enter correct email & password</p>
           <div class="container">
@@ -37,9 +44,9 @@ function Login() {
               </div>
             </div>
             <br />
-            <div  style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center' }}>
               <p>Forgot password? Reset password</p>
-              <br/>
+              <br />
               <div style={{ textAlign: 'center' }}>
                 <button className='undesable-btn' >Next</button>
               </div>
